@@ -29,10 +29,11 @@ export default function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="relative overflow-hidden bg-white py-6">
-        {/* Red background for left side */}
+      <nav className="relative py-6" style={{ backgroundColor: '#d70007' }}>
+        {/* White background for desktop, red diagonal overlay */}
+        <div className="absolute inset-0 bg-white hidden md:block"></div>
         <div 
-          className="absolute inset-0" 
+          className="absolute inset-0 overflow-hidden hidden md:block" 
           style={{
             backgroundColor: '#d70007',
             clipPath: 'polygon(0 0, 35% 0, 30% 100%, 0 100%)'
@@ -60,24 +61,29 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden text-black text-2xl"
+              className="md:hidden text-white text-2xl p-2 relative z-20 cursor-pointer"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               ☰
             </button>
           </div>
 
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <ul className="md:hidden mt-4 pb-4 space-y-2">
-              <li><Link href="/" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-2">Home</Link></li>
-              <li><Link href="/acrylic" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-2">Acrylic</Link></li>
-              <li><Link href="/filament" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-2">Filament</Link></li>
-              <li><Link href="/pv-yarns" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-2">PV-Yarns</Link></li>
-              <li><Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-2">Contact Us</Link></li>
-            </ul>
-          )}
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {isMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-200 md:hidden z-50 w-full">
+            <div className="container">
+              <ul className="py-2">
+                <li><Link href="/" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-4 px-4 hover:bg-gray-100 border-b border-gray-100">Home</Link></li>
+                <li><Link href="/acrylic" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-4 px-4 hover:bg-gray-100 border-b border-gray-100">Acrylic</Link></li>
+                <li><Link href="/filament" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-4 px-4 hover:bg-gray-100 border-b border-gray-100">Filament</Link></li>
+                <li><Link href="/pv-yarns" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-4 px-4 hover:bg-gray-100 border-b border-gray-100">PV-Yarns</Link></li>
+                <li><Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block text-black font-semibold py-4 px-4 hover:bg-gray-100">Contact Us</Link></li>
+              </ul>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   )

@@ -27,7 +27,6 @@
 }
 
 .nav-menu {
-  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -460,8 +459,7 @@
   }
   
   .nav-menu {
-    flex-direction: column;
-    gap: 15px;
+    display: none;
   }
   
   .contact-form {
