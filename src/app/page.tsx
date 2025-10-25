@@ -31,7 +31,7 @@ export default function Home() {
           </div>
 
           <div className="product-cards">
-            <div className="product-card">
+            <Link href="/acrylic" className="product-card block">
               <div className="product-card-content flex flex-col h-full">
                 <div className="flex-grow">
                   <h3>Acrylic Yarn</h3>
@@ -40,13 +40,13 @@ export default function Home() {
                     due to its affordability, vibrant colors, and ability to hold its shape.
                   </p>
                 </div>
-                <Link href="/acrylic" className="cta-link mt-4">
+                <div className="cta-link mt-4">
                   READ MORE →
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="product-card">
+            <Link href="/filament" className="product-card block">
               <div className="product-card-content flex flex-col h-full">
                 <div className="flex-grow">
                   <h3>Filament Yarn</h3>
@@ -56,13 +56,13 @@ export default function Home() {
                     are often used in applications requiring strength, durability, and a fine, lustrous appearance.
                   </p>
                 </div>
-                <Link href="/filament" className="cta-link mt-4">
+                <div className="cta-link mt-4">
                   READ MORE →
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="product-card">
+            <Link href="/pv-yarns" className="product-card block">
               <div className="product-card-content flex flex-col h-full">
                 <div className="flex-grow">
                   <h3>Poly Viscose Yarn</h3>
@@ -73,11 +73,11 @@ export default function Home() {
                     the absorbency, soft feel, and drape characteristic of viscose.
                   </p>
                 </div>
-                <Link href="/pv-yarns" className="cta-link mt-4">
+                <div className="cta-link mt-4">
                   READ MORE →
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
