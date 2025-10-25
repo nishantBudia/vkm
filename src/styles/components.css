@@ -403,6 +403,20 @@
   margin: 40px 0;
 }
 
+/* Contact form wrapper for split layout alignment */
+.contact-form-wrapper .contact-form {
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+/* Increase height of contact info cards to match form height on contact page */
+.space-y-6 .contact-info-item {
+  min-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .contact-info-item {
   background: white;
   padding: 30px;

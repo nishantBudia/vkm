@@ -26,52 +26,67 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Information Section */}
+      {/* Main Content Section - Split View */}
       <section className="section-padding">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-800">Get In Touch</h2>
             <p className="text-xl text-gray-600">We're here to help with your yarn requirements</p>
           </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Side - Contact Information & Location */}
+            <div className="flex flex-col h-full">
+              {/* Contact Information */}
+              <div className="flex-1 flex flex-col justify-between space-y-4">
+                <div className="contact-info-item flex-1">
+                  <h4>📞 Phone</h4>
+                  <p>
+                    <strong>Main Office:</strong><br />
+                    010 013 1300
+                  </p>
+                  <p>
+                    <strong>Mobile:</strong><br />
+                    +27 79 499 9978 (Kader)
+                  </p>
+                </div>
 
-          <div className="contact-info">
-            <div className="contact-info-item">
-              <h4>📞 Phone</h4>
-              <p>
-                <strong>Main Office:</strong><br />
-                010 013 1300
-              </p>
-              <p>
-                <strong>Mobile:</strong><br />
-                +27 79 499 9978 (Kader)
-              </p>
+                <div className="contact-info-item flex-1">
+                  <h4>✉️ Email</h4>
+                  <p>
+                    <strong>General Inquiries:</strong><br />
+                    <a href="mailto:sales@vkm.co.za" className="text-primary">sales@vkm.co.za</a>
+                  </p>
+                  <p>
+                    <strong>Direct Contact:</strong><br />
+                    <a href="mailto:kader@vkm.co.za" className="text-primary">kader@vkm.co.za</a>
+                  </p>
+                </div>
+
+                <div className="contact-info-item flex-1">
+                  <h4>💬 WhatsApp</h4>
+                  <p>
+                    <strong>WhatsApp:</strong><br />
+                    <a href="https://wa.me/27683267711" className="text-primary">+27 68 326 7711</a>
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="contact-info-item">
-              <h4>✉️ Email</h4>
-              <p>
-                <strong>General Inquiries:</strong><br />
-                <a href="mailto:sales@vkm.co.za" className="text-primary">sales@vkm.co.za</a>
-              </p>
-              <p>
-                <strong>Direct Contact:</strong><br />
-                <a href="mailto:kader@vkm.co.za" className="text-primary">kader@vkm.co.za</a>
-              </p>
-            </div>
-
-            <div className="contact-info-item">
-              <h4>💬 WhatsApp</h4>
-              <p>
-                <strong>WhatsApp:</strong><br />
-                <a href="https://wa.me/27683267711" className="text-primary">+27 68 326 7711</a>
-              </p>
+            {/* Right Side - Contact Form */}
+            <div className="contact-form-wrapper">
+              <ContactForm />
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Address Section */}
-          <div className="text-center mt-16 mb-8">
+      {/* Location Section */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-6 text-gray-800">Visit Our Location</h3>
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+            <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto mb-8">
               <h4 className="text-xl font-semibold mb-4 text-primary">VKM Traders</h4>
               <p className="text-lg text-gray-700 leading-relaxed">
                 23 Cloud Street<br />
@@ -95,52 +110,6 @@ export default function ContactPage() {
               referrerPolicy="no-referrer-when-downgrade"
               title="VKM Traders Location"
             ></iframe>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="bg-light section-padding">
-        <div className="container">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Send Us a Message</h2>
-            <p className="text-xl text-gray-600">Fill out the form below and we'll get back to you as soon as possible</p>
-          </div>
-          <ContactForm />
-        </div>
-      </section>
-
-      {/* Business Hours Section */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold mb-8 text-gray-800">Business Hours</h3>
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
-                <div>
-                  <p><strong>Monday - Thursday:</strong></p>
-                  <p className="text-gray-600">8:00 AM - 5:00 PM</p>
-                </div>
-                <div>
-                  <p><strong>Friday:</strong></p>
-                  <p className="text-gray-600">8:00 AM - 12:30 PM<br />1:30 PM - 4:30 PM</p>
-                </div>
-                <div>
-                  <p><strong>Weekends:</strong></p>
-                  <p className="text-gray-600">Closed</p>
-                </div>
-                <div>
-                  <p><strong>Public Holidays:</strong></p>
-                  <p className="text-gray-600">Closed</p>
-                </div>
-              </div>
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-gray-600">
-                  <strong>Note:</strong> For urgent inquiries outside business hours, 
-                  please contact us via WhatsApp or email.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
