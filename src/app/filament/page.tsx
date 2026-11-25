@@ -40,41 +40,6 @@ export default function FilamentPage() {
                   called filaments, which run the entire length of the yarn. Its long, smooth fibers 
                   are often used in applications requiring strength, durability, and a fine, lustrous appearance.
                 </p>
-                
-                <p>
-                  Unlike spun yarns that are made from short fibers twisted together, filament yarns 
-                  maintain their continuous structure, resulting in superior strength characteristics 
-                  and a smoother surface finish.
-                </p>
-
-                <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">Key Features:</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Continuous fiber structure for maximum strength</li>
-                  <li>Smooth surface with lustrous appearance</li>
-                  <li>Excellent dimensional stability</li>
-                  <li>Superior abrasion resistance</li>
-                  <li>Consistent quality throughout the yarn length</li>
-                  <li>Available in various denier weights</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">Ideal Applications:</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>High-end apparel and fashion garments</li>
-                  <li>Technical textiles and industrial fabrics</li>
-                  <li>Automotive textiles</li>
-                  <li>Home furnishing fabrics</li>
-                  <li>Sportswear and activewear</li>
-                  <li>Luxury bedding and linens</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">Material Options:</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Polyester filament yarn</li>
-                  <li>Nylon filament yarn</li>
-                  <li>Viscose filament yarn</li>
-                  <li>Silk filament yarn</li>
-                  <li>Specialty blend filaments</li>
-                </ul>
               </div>
             </div>
             

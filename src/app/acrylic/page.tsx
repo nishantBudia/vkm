@@ -39,31 +39,6 @@ export default function AcrylicPage() {
                   Acrylic yarn is a synthetic yarn that has become a popular choice for knitting and 
                   crocheting projects due to its affordability, vibrant colors, and ability to hold its shape.
                 </p>
-                
-                <p>
-                  Made from acrylic fibers, this type of yarn offers excellent durability and is resistant 
-                  to stretching, shrinking, and wrinkling. It's also lightweight and warm, making it ideal 
-                  for a variety of textile applications.
-                </p>
-
-                <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">Key Benefits:</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Excellent color retention and vibrancy</li>
-                  <li>Machine washable and easy to care for</li>
-                  <li>Hypoallergenic properties</li>
-                  <li>Cost-effective for large-scale manufacturing</li>
-                  <li>Available in a wide range of weights and textures</li>
-                  <li>Resistant to moths and other insects</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-primary mt-8 mb-4">Applications:</h3>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Apparel manufacturing</li>
-                  <li>Home textiles and upholstery</li>
-                  <li>Blankets and throws</li>
-                  <li>Craft and hobby projects</li>
-                  <li>Industrial textile applications</li>
-                </ul>
               </div>
             </div>
             
