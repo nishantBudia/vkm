@@ -57,8 +57,9 @@ npm run dev
 ### Build for Production
 
 ```bash
-npm run build
-npm start
+npm run build     # static export to ./out
+npm run preview   # build, then serve ./out locally the way Cloudflare does
+npm run deploy    # build, then publish to Cloudflare (see wrangler.jsonc)
 ```
 
 ## 📁 Project Structure
@@ -111,7 +112,8 @@ vkm-nextjs/
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
-- `npm run start` - Start production server
+- `npm run preview` - Build and serve the static export locally
+- `npm run deploy` - Build and publish to Cloudflare
 - `npm run lint` - Run ESLint
 
 ## 📝 Content Migration

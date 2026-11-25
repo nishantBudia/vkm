@@ -1,0 +1,15 @@
+{
+  // Cloudflare Worker that serves the static export in ./out. No Worker code.
+  // Deploy with `npm run deploy`.
+  "name": "vkm",
+  "compatibility_date": "2026-11-25",
+  "assets": {
+    "directory": "./out",
+    // Unknown paths get the site's own 404.html with a 404 status.
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    // Demo address. Add vkm.co.za and www.vkm.co.za here at go-live.
+    { "pattern": "vkm.nishantbudia.com", "custom_domain": true }
+  ]
+}

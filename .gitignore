@@ -41,3 +41,5 @@ coverage/
 *.log
 *.tmp
 *.bak
+# Cloudflare Wrangler local state
+.wrangler/
