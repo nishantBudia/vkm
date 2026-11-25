@@ -2,15 +2,34 @@
 
 import { useState } from 'react'
 
+// Same number as the WhatsApp link on the contact page.
+const WHATSAPP_NUMBER = '27683267711'
+
+const emptyForm = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  yarnTypes: [] as string[],
+  query: ''
+}
+
+// The site is a static export with no backend, so an enquiry is handed to
+// WhatsApp as a pre-filled message that the visitor sends themselves.
+function whatsAppUrl(data: typeof emptyForm) {
+  const lines = [
+    'New enquiry from the VKM Traders website',
+    `Name: ${data.firstName} ${data.lastName}`.trim(),
+    `Email: ${data.email}`,
+    data.phone && `Phone: ${data.phone}`,
+    data.yarnTypes.length > 0 && `Yarn: ${data.yarnTypes.join(', ')}`,
+    data.query && `Query: ${data.query}`
+  ].filter(Boolean)
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`
+}
+
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    yarnTypes: [] as string[],
-    query: ''
-  })
+  const [formData, setFormData] = useState(emptyForm)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -18,12 +37,10 @@ export default function ContactForm() {
   }
 
   const handleCheckboxChange = (value: string) => {
-    console.log('Checkbox clicked:', value)
     setFormData(prev => {
       const newYarnTypes = prev.yarnTypes.includes(value)
         ? prev.yarnTypes.filter(type => type !== value)
         : [...prev.yarnTypes, value]
-      console.log('New yarnTypes:', newYarnTypes)
       return {
         ...prev,
         yarnTypes: newYarnTypes
@@ -33,9 +50,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Handle form submission here
-    alert('Thank you for your inquiry! We will get back to you soon.')
+    window.open(whatsAppUrl(formData), '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -129,12 +144,13 @@ export default function ContactForm() {
             name="query"
             value={formData.query}
             onChange={handleChange}
+            maxLength={1000}
             placeholder="Please describe your yarn requirements..."
           ></textarea>
         </div>
 
         <button type="submit" className="submit-btn">
-          Send Message
+          Send via WhatsApp
         </button>
       </form>
     </div>
