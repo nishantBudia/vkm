@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ContactForm from '@/components/ContactForm'
 import Image from 'next/image'
 import { Metadata } from 'next'
 

@@ -7,7 +7,7 @@ This document provides comprehensive guidance for working on the VKM Traders Nex
 **Project Name:** VKM Traders Website  
 **Technology Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS  
 **Purpose:** Modern recreation of WordPress-based yarn trading website  
-**Key Features:** Product showcase, contact forms, responsive design, zero WordPress dependencies
+**Key Features:** Product showcase, contact details, responsive design, zero WordPress dependencies
 
 ## Architecture & File Structure
 
@@ -24,8 +24,7 @@ vkm-nextjs/
 │   │   └── contact/        # Contact page
 │   ├── components/         # Reusable React components
 │   │   ├── Header.tsx      # Navigation with diagonal design
-│   │   ├── Footer.tsx      # Footer with business info
-│   │   └── ContactForm.tsx # Contact form with checkboxes
+│   │   └── Footer.tsx      # Footer with business info
 │   └── styles/
 │       └── components.css  # Component-specific styling
 ├── public/
@@ -49,14 +48,13 @@ background-color: '#d70007',
 clipPath: 'polygon(0 0, 35% 0, 30% 100%, 0 100%)'
 ```
 
-### 2. ContactForm Component (`src/components/ContactForm.tsx`)
-- **Features:** Multi-field form with checkbox selection for yarn types
-- **State Management:** React state with array for multiple selections
-- **Critical Function:** `handleCheckboxChange` for yarn type selection
+### 2. ContactForm Component (removed)
+- The site has no enquiry form, the same as the original WordPress site. Visitors use the phone numbers and email addresses on the contact page.
+- The form styles are still in `src/styles/components.css` but nothing uses them. The form and checkbox notes below apply only if a form is added again.
 
 ### 3. Home Page (`src/app/page.tsx`)
-- **Sections:** Hero, What We Offer, About Us (with contact form)
-- **Key Elements:** Product cards, image gallery, embedded contact form
+- **Sections:** Hero, What We Offer, About Us
+- **Key Elements:** Product cards, image gallery
 - **Anchor Links:** `id="about"` for footer navigation
 
 ## CSS Architecture & Styling Strategy

@@ -13,11 +13,11 @@ This is a modern recreation of the VKM Traders website using Next.js, React, and
 
 ## 📋 Pages
 
-- **Home** (`/`) - Main landing page with yarn categories and contact form
+- **Home** (`/`) - Main landing page with yarn categories and About Us
 - **Acrylic Yarn** (`/acrylic`) - Detailed acrylic yarn information
 - **Filament Yarn** (`/filament`) - Filament yarn specifications and applications
 - **PV Yarns** (`/pv-yarns`) - Poly viscose yarn details
-- **Contact** (`/contact`) - Contact information and inquiry form
+- **Contact** (`/contact`) - Phone numbers, email addresses, address and map
 
 ## 🛠 Technologies Used
 
@@ -77,8 +77,7 @@ vkm-nextjs/
 │   │   └── globals.css     # Global styles
 │   ├── components/         # Reusable React components
 │   │   ├── Header.tsx      # Navigation header
-│   │   ├── Footer.tsx      # Site footer
-│   │   └── ContactForm.tsx # Contact form component
+│   │   └── Footer.tsx      # Site footer
 │   └── styles/             # Additional styling
 │       └── components.css  # Component-specific styles
 ├── public/                 # Static assets
@@ -106,7 +105,6 @@ vkm-nextjs/
 - **Phone**: 010 013 1300
 - **Email**: sales@vkm.co.za
 - **Address**: 23 Cloud Street, Westhill Business Estate, Sunderland Ridge, Centurion, 0149
-- **WhatsApp**: +27 68 326 7711
 
 ## 🔧 Development Scripts
 
@@ -123,7 +121,7 @@ All content has been carefully migrated from the original WordPress site:
 - ✅ Navigation structure preserved
 - ✅ All page content and descriptions maintained
 - ✅ Product information accurately transferred
-- ✅ Contact details and forms recreated
+- ✅ Contact details recreated
 - ✅ Images and media assets copied
 - ✅ SEO metadata preserved
 - ✅ Responsive design maintained

@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ContactForm from '@/components/ContactForm'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Main Content Section - Split View */}
+      {/* Contact details */}
       <section className="section-padding">
         <div className="container">
           <div className="text-center mb-12">
@@ -35,47 +34,28 @@ export default function ContactPage() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Side - Contact Information & Location */}
-            <div className="flex flex-col h-full">
-              {/* Contact Information */}
-              <div className="flex-1 flex flex-col justify-between space-y-4">
-                <div className="contact-info-item flex-1">
-                  <h4>📞 Phone</h4>
-                  <p>
-                    <strong>Main Office:</strong><br />
-                    010 013 1300
-                  </p>
-                  <p>
-                    <strong>Mobile:</strong><br />
-                    +27 79 499 9978 (Kader)
-                  </p>
-                </div>
-
-                <div className="contact-info-item flex-1">
-                  <h4>✉️ Email</h4>
-                  <p>
-                    <strong>General Inquiries:</strong><br />
-                    <a href="mailto:sales@vkm.co.za" className="text-primary">sales@vkm.co.za</a>
-                  </p>
-                  <p>
-                    <strong>Direct Contact:</strong><br />
-                    <a href="mailto:kader@vkm.co.za" className="text-primary">kader@vkm.co.za</a>
-                  </p>
-                </div>
-
-                <div className="contact-info-item flex-1">
-                  <h4>💬 WhatsApp</h4>
-                  <p>
-                    <strong>WhatsApp:</strong><br />
-                    <a href="https://wa.me/27683267711" className="text-primary">+27 68 326 7711</a>
-                  </p>
-                </div>
-              </div>
+            <div className="contact-info-item">
+              <h4>📞 Phone</h4>
+              <p>
+                <strong>Main Office:</strong><br />
+                010 013 1300
+              </p>
+              <p>
+                <strong>Mobile:</strong><br />
+                +27 79 499 9978 (Kader)
+              </p>
             </div>
 
-            {/* Right Side - Contact Form */}
-            <div className="contact-form-wrapper">
-              <ContactForm />
+            <div className="contact-info-item">
+              <h4>✉️ Email</h4>
+              <p>
+                <strong>General Inquiries:</strong><br />
+                <a href="mailto:sales@vkm.co.za" className="text-primary">sales@vkm.co.za</a>
+              </p>
+              <p>
+                <strong>Direct Contact:</strong><br />
+                <a href="mailto:kader@vkm.co.za" className="text-primary">kader@vkm.co.za</a>
+              </p>
             </div>
           </div>
         </div>
